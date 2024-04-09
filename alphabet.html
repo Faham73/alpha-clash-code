@@ -71,32 +71,21 @@
                     </div>
                 </div>
                 <!-- key end -->
-                <!-- life score
-                <div class="flex justify-between w-3/4">
-                    <button class="btn rounded-full bg-purple-400 text-white px-4">
-                        <span>Life</span>
-                        <img src="images/heart.svg" alt="">
-                        <span>1</span>
-                    </button>
-                    <button class="btn rounded-full bg-purple-400 text-white px-4">
-                        <span>Score</span>
-                        <img src="images/dollar.svg" alt="">
-                        <span>1</span>
-                    </button>
-                </div> -->
+                
 
-                <!-- life Score -->
+                <!-- Display life -->
             <div class="flex justify-between w-3/4 ">
                 <div class>
                     <button class="btn bg-purple-600 rounded-full border-none">Life
                         <img src="./images/heart.svg" alt="">
-                        <span id="current-life">6</span>
+                        <span id="current-life" class="text-white">6</span>
                     </button>
                 </div>
+                <!-- Display score -->
                 <div>
                     <button class="btn  bg-purple-600 rounded-full border-none">Score
                         <img src="./images/dollar.svg" alt="">
-                        <span id="current-score">0</span>
+                        <span id="current-score" class="text-white">0</span>
                     </button>
                 </div>
             </div>
@@ -104,13 +93,13 @@
         </section>
         <!-- Play-ground end -->
         <!-- Final score start -->
-        <section class="score justify-center items-center min-h-screen hidden">
+        <section id="final-score" class="score justify-center items-center min-h-screen hidden">
             <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
                 <h1 class="text-8xl">
                     <span class="font-extrabold">Score:</span>
-                    <span>14</span>
+                    <span id="last-score">14</span>
                 </h1>
-                <button class="btn">Play Again</button>
+                <button onclick="play()" class="btn">Play Again</button>
                 <p>Practice makes you a pro</p>
             </div>
         </section>
