@@ -1,3 +1,27 @@
+function handleKeyboardKeyUpEvent(event){
+    const pressed = event.key;
+    console.log('player pressed ', pressed)
+
+    const currentAlphabetElement = document.getElementById('current-alphabet') 
+    currentAlphabet = currentAlphabetElement.innerText
+    expectedAlphabet = currentAlphabet.toLowerCase()
+    console.log(pressed, expectedAlphabet);
+    // console.log(currentAlphabetElement.innerText);
+
+    // check matched or not
+    if(pressed  === expectedAlphabet ){
+        console.log('you get a point');
+        console.log("you have pressed correctly", expectedAlphabet)
+        continueGame();
+        removeBackgroundColorById(expectedAlphabet)
+    }
+    else{
+        console.log('you missed');
+    }
+}
+// Capture keyboard key press
+document.addEventListener('keyup', handleKeyboardKeyUpEvent)
+
 function continueGame(){
     const alphabet = getARandomAlphabet()
     console.log(alphabet)
